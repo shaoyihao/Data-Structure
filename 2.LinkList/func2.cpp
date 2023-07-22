@@ -14,6 +14,21 @@ ElemType GetElem(LinkList head, int idx)
     if (p == NULL) return ERROR; // 说明 idx 超出了表长
     else return p->data;
 }
+Node* GetElem2(LinkList head, int idx)
+{
+//  if (idx == 0) return head;
+
+    Node *p = head->next; 
+
+    int count = 1;
+    while (p && count < idx)
+    {
+        p = p->next;
+        count ++;
+    } 
+	
+    return p; // 若 p 为 NULL，说明 idx 超出了表长
+}
 
 int ElemPosition(LinkList head, ElemType e)
 {
@@ -49,7 +64,7 @@ void InsertNode(LinkList head, int idx, ElemType e)
     }
 
     if (p == NULL) return;
-    else   //此时 p 指向第 idx-1 个元素
+    else   // 此时 p 指向第 idx-1 个元素，下面进行插入操作
     {
         newNode->next = p->next;
         p->next = newNode;

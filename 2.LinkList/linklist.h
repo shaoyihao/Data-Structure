@@ -6,7 +6,7 @@ struct Node
     ElemType data;
     struct Node *next;
 };
-typedef Node *LinkList;
+typedef Node* LinkList;
 
 
 /* ------- 简单操作，具体实现见 func1.cpp ------- */
@@ -19,6 +19,7 @@ void printList(LinkList L);
 
 /* ------- 较复杂操作，具体实现见 func2.cpp ------- */
 ElemType GetElem(LinkList L, int idx);
+Node* GetElem2(LinkList L, int idx);
 int ElemPosition(LinkList L, ElemType e);
 Node* LocateElem(LinkList L, ElemType e);
 void InsertNode(LinkList L, int idx, ElemType e);  //将元素e插入到第idx个位置（在第idx个结点前插入一个结点）
