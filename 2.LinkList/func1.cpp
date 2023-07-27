@@ -5,7 +5,7 @@ void InitList(LinkList &head)  // 对指针变量head自身进行操作
     head = new Node;   // 头结点
     head->next = NULL;
 }
-void DestroyList(LinkList head)
+void DestroyList(LinkList &head)
 {
     Node *p = head;
     Node *ne = head->next;
@@ -15,6 +15,7 @@ void DestroyList(LinkList head)
         p = ne;
         ne = ne->next;
     }
+    head = NULL;
 }
 void ClearList(LinkList head)
 {

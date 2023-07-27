@@ -1,5 +1,22 @@
 #include "dlinklist.h"
 
+void CreateList_R(DLinkList &head, int n)
+{
+    head = new Node;
+    head->prior = head->next = NULL;
+
+    Node *tail = head;
+    while (n --)
+    {
+        Node *p = new Node;
+        cin >> p->data;
+        p->prior = tail;
+        p->next = NULL;
+        tail->next = p;
+        tail = p;
+    }
+}
+
 void InsertNode(DLinkList head, int idx, ElemType e)
 {
     Node *newNode = new Node;

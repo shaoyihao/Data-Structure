@@ -11,7 +11,7 @@ typedef Node* LinkList;
 
 /* ------- 简单操作，具体实现见 func1.cpp ------- */
 void InitList(LinkList &L);
-void DestroyList(LinkList L);
+void DestroyList(LinkList &L);
 void ClearList(LinkList L);
 bool IsEmpty(LinkList L);
 int ListLength(LinkList L);
